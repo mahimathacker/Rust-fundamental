@@ -52,11 +52,10 @@ fn main() {
     let u = i as u32;
     println!("{i} as u32 = {u}");
 
-
     //Min and Max numbers
 
-    let i_max = i32 :: MAX;
-    let u_max = u32:: MIN;
+    let i_max = i32::MAX;
+    let u_max = u32::MIN;
 
     println!("{i_max}");
     println!("{u_max}");
