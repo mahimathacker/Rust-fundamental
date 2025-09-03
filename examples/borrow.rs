@@ -3,12 +3,17 @@
 fn take(s: String) {
     println!("{s}");
 }
+fn borrow(s: &String) {
+    println!("{s}");
+}
 //Borrow - Temporarily use the value of a variable without taking ownership
 
 fn main() {
     //Take Ownership
     let s = String::from("rust");
-    take(s);
+    // take(s);
+    borrow(&s);
+    println!("{s}");
     // println!("{s}"); //S is dropped here
 
     // - Create a reference (either mutable or immutable)
@@ -46,7 +51,7 @@ let s2 = &s;
     }
     //s2 and s no longer exists 
     //s1 is still reference to the value of s
-    println!("s1: {s1}");
+    // println!("s1: {s1}");
 
     /* The problem: s1 is trying to reference s, but s has been moved and no longer exists. This creates a dangling reference - s1 is pointing to memory that has been freed.
 Why this violates Rust's borrowing rules:
@@ -63,5 +68,6 @@ Move: "I give you my car" → I no longer have a car
 Borrow: "You can use my car" → I still have my car, you just have permission to use it
 
 */
+//We can create multiple immutable references, but only one mutable reference
   
 }
