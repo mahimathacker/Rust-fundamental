@@ -46,9 +46,8 @@ fn main() {
         println!("vec {}", n);
     }
 
-
     let mut i = 0;
-    let z: &str =  loop {
+    let z: &str = loop {
         println!("looping");
         i += 1;
         if i > 5 {

@@ -1,11 +1,11 @@
 #![allow(unused)]
 
 //Owneship rules
-fn take(s:String) {
+fn take(s: String) {
     println!("{s}");
     //S is dropped he
 }
-fn copy(i:i32) {
+fn copy(i: i32) {
     println!("{i}");
     //I is copied here
 }
@@ -16,13 +16,13 @@ fn main() {
     let s = String::from("rust");
 
     // Owner of x is x
-    let  x = 5;
+    let x = 5;
 
     //2. There can only be one owner at a time
 
     let s = String::from("dog");
     // Owner of s is s1
-    let s1  = s;
+    let s1 = s;
     // println!("{s1}");
 
     // println!("{s}")
@@ -49,5 +49,4 @@ fn main() {
 
     copy(i);
     println!("i: {i}");
-    
 }
