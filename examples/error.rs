@@ -3,11 +3,11 @@
 
 enum MathError {
     DivideByZero,
-    Other
+    Other,
 }
 
-/* 
-Error Handling! 
+/*
+Error Handling!
 
 panic!:
 
@@ -41,7 +41,7 @@ fn main() {
     //panic mac- crash the program
     // panic!("crash the program");
 
-    let v = vec![1,2,3];
+    let v = vec![1, 2, 3];
     // // //v[99]; : Index out of bounds error
 
     let x: Option<&i32> = v.get(1);
@@ -51,7 +51,7 @@ fn main() {
     }
 
     //Result<T,E> : Success or Failure = Ok(T) | Err(E)
-   
+
     let x = 1;
     let y = 0;
 
@@ -63,13 +63,6 @@ fn main() {
 
     match q {
         Ok(val) => println!("value is = {:?}", val),
-        Err(err) => println!("error is = {:?}", err)
+        Err(err) => println!("error is = {:?}", err),
     }
-
-
-
-
-
-
-
 }
