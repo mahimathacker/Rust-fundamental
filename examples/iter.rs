@@ -37,9 +37,14 @@ fn main() {
  println!("hashmap: {:?}", v4);
 
  //Chaining Filter and Map
+//  let vals : Vec<u32> = vec![1,2, 3, 4, 5];
+
+//  let filter_vals: Vec<u32> = vals.iter().filter(|x: &&u32 | **x <= 3).map(|x : &u32| x + 1).collect(); //** dereference the reference to get the value and && first fives refrence of the u32 from the iterator and for filter
+//  println!("filter_vals: {:?}", filter_vals);
+
  let vals : Vec<u32> = vec![1,2, 3, 4, 5];
 
- let filter_vals: Vec<u32> = vals.iter().filter(|x: &&u32 | **x <= 3).map(|x : &u32| x + 1).collect(); //** dereference the reference to get the value and && first fives refrence of the u32 from the iterator and for filter
+ let filter_vals: Vec<u32> = vals.into_iter().filter(|x: &u32 | *x <= 3).map(|x : u32| x + 1).collect(); //Keep one refrence and destructing because into_iter takes only T and not &T unlike the iter()
  println!("filter_vals: {:?}", filter_vals);
 
  }
