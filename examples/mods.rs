@@ -11,8 +11,8 @@ use hello_rust::my;
 
 // mod my {
 // //    use super::foo; //Look for the module one above the current module or parent module
-// //    //foo 
-// //    // - my 
+// //    //foo
+// //    // - my
 // //    // a
 
 // //    pub fn print_foo() {
@@ -21,12 +21,12 @@ use hello_rust::my;
 
 //    pub fn print() { //public by adding pub keyword
 //         println!("Hello from public print");
-    
+
 //     }
 //     fn private_print() { //private by default
 //         a::print();
 //         println!("Hello from print");
-    
+
 //     }
 //    pub mod a { //public by adding pub keyword to access it from the outside
 //         use super::super::foo;
@@ -51,7 +51,6 @@ use hello_rust::my;
 //     }
 // }
 
-
 fn main() {
     my::print();
     my::a::print();
@@ -61,5 +60,4 @@ fn main() {
     // };
     let s = my::a::build(0);
     my::a::print_foo();
-
 }

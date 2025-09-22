@@ -8,12 +8,12 @@ pub fn print() {
 }
 pub struct S {
     pub id: u32,
-    pub name: String
+    pub name: String,
 }
 
 pub fn build(id: u32) -> S {
     S {
         id,
-        name: " ".to_string()
+        name: " ".to_string(),
     }
 }

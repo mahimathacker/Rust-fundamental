@@ -6,7 +6,7 @@ trait List<T> {
 }
 
 impl List<u32> for (u32, bool, char) {
-    fn count(&self) -> usize{
+    fn count(&self) -> usize {
         3
     }
 
@@ -16,7 +16,7 @@ impl List<u32> for (u32, bool, char) {
 }
 
 impl<T> List<T> for Vec<T> {
-    fn count(&self) -> usize{
+    fn count(&self) -> usize {
         self.len()
     }
 
@@ -25,13 +25,12 @@ impl<T> List<T> for Vec<T> {
     }
 }
 
-
 fn main() {
-let t = (1u32, true, 'a');
-let v = vec![1u32, 2, 3];
+    let t = (1u32, true, 'a');
+    let v = vec![1u32, 2, 3];
 
-println!("Count: {}", t.count());
-println!("First: {}", t.first());
-println!("Count: {}", v.count());
-println!("First: {}", v.first());
+    println!("Count: {}", t.count());
+    println!("First: {}", t.first());
+    println!("Count: {}", v.count());
+    println!("First: {}", v.first());
 }

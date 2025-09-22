@@ -4,13 +4,10 @@
 pub mod foo;
 pub mod my;
 //    use super::foo; //Look for the module one above the current module or parent module
-//    //foo 
-//    // - my 
+//    //foo
+//    // - my
 //    // a
 
 //    pub fn print_foo() {
 //     foo::print();
 //    }
-
-
-
